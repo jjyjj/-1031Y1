@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="it_adduser.aspx.cs" Inherits="MarketInfo.it.it_adduser" %>

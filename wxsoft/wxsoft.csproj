@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E294C16-2181-4BFF-8A78-9F706661C736}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wxsoft</RootNamespace>
+    <AssemblyName>wxsoft</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\app.css" />
+    <Content Include="css\feedback.css" />
+    <Content Include="css\icons-extra.css" />
+    <Content Include="css\imagecss.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\mui.dtpicker.css" />
+    <Content Include="css\mui.imageviewer.css" />
+    <Content Include="css\mui.indexedlist.css" />
+    <Content Include="css\mui.listpicker.css" />
+    <Content Include="css\mui.min.css" />
+    <Content Include="css\mui.picker.all.css" />
+    <Content Include="css\mui.picker.css" />
+    <Content Include="css\mui.picker.min.css" />
+    <Content Include="css\mui.poppicker.css" />
+    <Content Include="default.aspx" />
+    <Content Include="get.aspx" />
+    <Content Include="images\60x60.gif" />
+    <Content Include="images\cbd.jpg" />
+    <Content Include="images\fanhui.png" />
+    <Content Include="images\login-1.png" />
+    <Content Include="images\login.png" />
+    <Content Include="images\logo.ico" />
+    <Content Include="images\lwgs.png" />
+    <Content Include="images\msg.png" />
+    <Content Include="images\muwu.jpg" />
+    <Content Include="images\run.png" />
+    <Content Include="images\tx.png" />
+    <Content Include="images\qrcode.png" />
+    <Content Include="images\shuijiao.jpg" />
+    <Content Include="images\yuantiao.jpg" />
+    <Content Include="it.aspx" />
+    <Content Include="js\95516.js" />
+    <Content Include="js\ad.js" />
+    <Content Include="js\arttmpl.js" />
+    <Content Include="js\beecloud.js" />
+    <Content Include="js\city.data-3.js" />
+    <Content Include="js\city.data.js" />
+    <Content Include="js\feedback.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\mui.dtpicker.js" />
+    <Content Include="js\mui.imageViewer.js" />
+    <Content Include="js\mui.indexedlist.js" />
+    <Content Include="js\mui.js" />
+    <Content Include="js\mui.lazyload.img.js" />
+    <Content Include="js\mui.lazyload.js" />
+    <Content Include="js\mui.listpicker.js" />
+    <Content Include="js\mui.locker.js" />
+    <Content Include="js\mui.min.js" />
+    <Content Include="js\mui.picker.all.js" />
+    <Content Include="js\mui.picker.js" />
+    <Content Include="js\mui.picker.min.js" />
+    <Content Include="js\mui.poppicker.js" />
+    <Content Include="js\mui.previewimage.js" />
+    <Content Include="js\mui.pullToRefresh.js" />
+    <Content Include="js\mui.pullToRefresh.material.js" />
+    <Content Include="js\mui.view.js" />
+    <Content Include="js\mui.zoom.js" />
+    <Content Include="js\update.js" />
+    <Content Include="js\webviewGroup.js" />
+    <Content Include="libs\echarts-all.js" />
+    <Content Include="mapX.aspx" />
+    <Content Include="os.js" />
+    <Content Include="page.aspx" />
+    <Content Include="page\map.htm" />
+    <Content Include="page\xmap.htm" />
+    <Content Include="rx.aspx" />
+    <Content Include="temp.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="get.aspx.cs">
+      <DependentUpon>get.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="get.aspx.designer.cs">
+      <DependentUpon>get.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="it.aspx.cs">
+      <DependentUpon>it.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="it.aspx.designer.cs">
+      <DependentUpon>it.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mapX.aspx.cs">
+      <DependentUpon>mapX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mapX.aspx.designer.cs">
+      <DependentUpon>mapX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page.aspx.cs">
+      <DependentUpon>page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page.aspx.designer.cs">
+      <DependentUpon>page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rx.aspx.cs">
+      <DependentUpon>rx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rx.aspx.designer.cs">
+      <DependentUpon>rx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="temp.aspx.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="temp.aspx.designer.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fonts\mui-icons-extra.ttf" />
+    <None Include="fonts\mui.ttf" />
+    <None Include="开发日志\开发日志.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WXDBUtility\WXDBUtility.csproj">
+      <Project>{E2E2B109-07C5-4619-B4FF-80E7D885401F}</Project>
+      <Name>WXDBUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8669</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

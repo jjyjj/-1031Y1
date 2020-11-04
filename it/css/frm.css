@@ -1,0 +1,74 @@
+﻿body
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: 微软雅黑;
+    font-size: small;
+}
+
+
+.DIV_TOP
+{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 36px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #C0C0C0;
+}
+.DIV_MAIN
+{
+    position: fixed;
+    top: 38px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    overflow: auto;
+}
+.DIV_BT
+{
+    border: 1px solid #C0C0C0;
+    cursor: pointer;
+    background-color: #006699;
+    color: #FFFFFF;
+    width: 90px;
+    height: 30px;
+}
+
+.DIV_BT:Hover
+{
+    background-color: #FF3300;
+    color: #FFFFFF;
+}
+.TR
+{
+    cursor: pointer;
+}
+.TR:Hover
+{
+    background-color: #FFECD9;
+    color: #FF0000;
+}
+
+.DIV_LD_LEFT
+{
+    position: fixed;
+    top: 0px;
+    left: 1px;
+    border: 1px solid #C0C0C0;
+    bottom: 1px;
+    width: 200px;
+    z-index: 99;
+}
+
+.DIV_LD_MAIN
+{
+    position: fixed;
+    top: 0px;
+    right: 1px;
+    left: 204px;
+    border: 1px solid #C0C0C0;
+    bottom: 1px;
+}

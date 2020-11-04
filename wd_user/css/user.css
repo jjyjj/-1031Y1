@@ -1,0 +1,22 @@
+﻿body
+{
+    font-family: 微软雅黑;
+    font-size: small;
+}
+.DIV_TOP
+{
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    height: 36px;
+    border: 1px solid #C0C0C0;
+}
+.DIV_Main
+{
+    position: fixed;
+    top: 44px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+}

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="rem.js"></script>
+    <script src="jquery-2.2.3.min.js" type="text/javascript"></script>
+    <link href="ol.css" rel="stylesheet" type="text/css" />
+    <script src="ol.js" type="text/javascript"></script>
+    <link href="map.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="bootstrap.min.js" type="text/javascript"></script>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <title>河南省高速公路收费站管制示意图</title>
+    <style type="text/css">
+        /**
+    * 这是有关标记的样式
+    */
+        .ol-zoom 
+        {
+            display: none;
+        }
+        .ol-zoom-out {
+            display: none;
+        }
+         .ol-viewport {
+				/*完全透明*/
+				background-color: rgba(0, 0, 0, 0);
+				/*完全不透明*/
+				/*background-color: rgba(0, 28, 77,0.2);*/
+		}
+        .tooltip
+        {
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            color: white;
+            padding: 4px 8px;
+            opacity: 0.7;
+            white-space: nowrap;
+        }
+        .tooltip-measure
+        {
+            opacity: 1;
+            font-weight: bold;
+        }
+        .tooltip-static
+        {
+            background-color: #ffcc33;
+            color: black;
+            border: 1px solid white;
+        }
+        .tooltip-measure:before, .tooltip-static:before
+        {
+            border-top: 6px solid rgba(0, 0, 0, 0.5);
+            border-right: 6px solid transparent;
+            border-left: 6px solid transparent;
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            margin-left: -7px;
+            left: 50%;
+        }
+        .tooltip-static:before
+        {
+            border-top-color: #ffcc33;
+        }
+       @font-face {
+	            font-family:shuzi;
+	            src: url('lib_Mob/fonts/LcdD.ttf');
+        }
+    </style>
+</head>
+<body oncontextmenu="self.event.returnValue=false" onselectstart="return false">
+    <div id="map" style="width:100%;height:100%; position: absolute; z-index: 0;"></div>
+    <div style="display: none;">
+                <div id="info">
+        &nbsp;</div>
+            <!-- Clickable label for Vienna -->
+            <a class="overlay" id="vienna" target="_blank" href="http://en.wikipedia.org/wiki/Vienna">
+                Vienna</a>
+            <div id="marker" title="Marker">
+            </div>
+            <!-- Popup -->
+            <div id="popup" title="查询信息">
+            </div>
+    </div>
+</body>
+</html>
+<script src="map.js" type="text/javascript"></script>  

@@ -1,0 +1,264 @@
+﻿body
+{
+    margin: 0px;
+    font-family: 微软雅黑;
+    font-size: small;
+}
+
+.DIV_TOPBAR
+{
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    height: 42px;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #D2E1FF;
+}
+
+.DIV_MainBar
+{
+    position: absolute;
+    top: -40px;
+    right: 7px;
+    left: 3px;
+    bottom: 17px;
+    overflow: auto;
+}
+
+.btn_Yuan
+{
+    border: 1px solid #FFFFFF;
+    height: 30px;
+    background-color: #41B35C;
+    font-family: 微软雅黑;
+    font-size: small;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.avb
+{
+    background-color: #41B35C;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 微软雅黑;
+}
+
+.btn_Yuan:hover
+{
+    background-color: #FF0000;
+}
+
+.TopBar
+{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 52px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #808080;
+    z-index: 99;
+}
+
+.DataMain
+{
+    position: fixed;
+    top: 53px;
+    bottom: 0px;
+    left: 292px;
+    z-index: 0;
+    right: 0px;
+}
+
+.DataLeft
+{
+    position: fixed;
+    width: 291px;
+    top: 53px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #CFD7DA;
+    z-index: 0;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #808080;
+}
+.DataLeft_Bar
+{
+    position: absolute;
+    width: 60px;
+    top: 0px;
+    left: 0px;
+    background-color: #62C0FE;
+    z-index: 2;
+    height: 100%;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #808080;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #808080;
+}
+
+.DataLeft_Menu
+{
+    position: absolute;
+    top: 0px;
+    left: 61px;
+    background-color: #FFFFFF;
+    z-index: 2;
+    right: 0px;
+    bottom: 0px;
+    overflow: auto;
+}
+
+.TD_BAR
+{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.TD_BAR:hover
+{
+    background-color: #3998DA;
+}
+
+.TD_DATA_BAR
+{
+    cursor: pointer;
+}
+.TD_DATA_BAR:hover
+{
+    background-color: #F0F0F0;
+    color: #FF0000;
+}
+
+.IMG36
+{
+   width: 36px;
+   height: 36px; 
+}
+.Btn
+{
+    border: 1px solid #808080;
+    background-color: #666666;
+    font-family: 微软雅黑;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.Btn:hover
+{
+    background-color: #FF9933;
+}
+
+.BOTBAR
+{
+    position: absolute;
+    height: 24px;
+    left: 5px;
+    right: 0px;
+    bottom: 0px;
+    vertical-align: middle;
+    text-align: center;
+    z-index: 9;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #000000;
+}
+
+.MYTopBar
+{
+    position: absolute;
+    height: 41px;
+    left: 0px;
+    right: 0px;
+    vertical-align: middle;
+    top: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #666666;
+}
+
+.MYDataBar
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    vertical-align: middle;
+    top: 43px;
+    bottom: 28px;
+    overflow: auto;
+}
+
+.TD_ROWS
+{
+    cursor: pointer;
+    color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #C0C0C0;
+}
+.TD_ROWS:hover
+{
+    background-color: #41B35C;
+    color: #FFFFFF;
+    font-size:small;
+    font-family: 微软雅黑;
+}
+
+.DIV_MSG
+{
+    position: absolute;
+    
+   
+    border: 4px solid #808080; 
+    background-color: #FFFFFF; 
+    position: absolute; 
+    z-index: 3; 
+    width: 600px;
+    left:50%; 
+    top:50%;
+    margin-top:-200px;
+    margin-left:-300px; 
+    height: 400px; 
+    display:none;
+}
+.DIV_NOSEL
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #E7E7E7;
+    z-index: 2;
+    opacity: 0.50;
+    cursor: move;
+    display:none;
+    }
+.TextBorder
+{
+    border: 1px solid #666666;
+    width: 100%;
+    height: 100%;
+}
+.imgSize{max-width:600px;_width:expression(this.width > 600 ? "600px" : this.width);} 
+
+.TIME_DIV
+{
+    position: fixed;
+    z-index: 1;
+    width: 270px;
+    height: 40px;
+    color: #FFFFFF;
+    font-size: 17px;
+    left: 10px;
+    top: 20px;
+    vertical-align: bottom;
+    text-align: center;
+    font-family: 微软雅黑;
+    text-shadow: 2PX 2PX 2PX #003399;
+}

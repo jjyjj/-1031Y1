@@ -1,0 +1,60 @@
+﻿//------------------------------------------------------------------------------
+// <自动生成>
+//     此代码由工具生成。
+//
+//     对此文件的更改可能会导致不正确的行为，并且如果
+//     重新生成代码，这些更改将会丢失。 
+// </自动生成>
+//------------------------------------------------------------------------------
+
+namespace MarketInfo.wd_msg {
+    
+    
+    public partial class wd_txinfo {
+        
+        /// <summary>
+        /// m_bt 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label m_bt;
+        
+        /// <summary>
+        /// m_header 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label m_header;
+        
+        /// <summary>
+        /// m_seeMap 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox m_seeMap;
+        
+        /// <summary>
+        /// m_mapx 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image m_mapx;
+        
+        /// <summary>
+        /// m_neirong 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label m_neirong;
+    }
+}

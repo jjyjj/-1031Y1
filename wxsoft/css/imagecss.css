@@ -1,0 +1,23 @@
+﻿.selfScale{
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.selfScale img{
+  width: 100%;
+  top: 0;
+  position: relative;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  transition: transform 0.3s;
+}
+.selfScale img:hover{
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}

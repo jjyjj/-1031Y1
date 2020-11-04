@@ -1,0 +1,44 @@
+﻿body
+{
+    font-size: small;
+    font-family: 微软雅黑;
+}
+.DIV_FIX
+{
+    padding: 5px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: auto;
+}
+.DIV_MAP
+{
+    position: fixed;
+    top: 2px;
+    right: 3px;
+    bottom: 3px;
+    left: 2px;
+    border: 1px solid #C0C0C0;
+}
+
+.DIV_TOOL
+{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 5px;
+    top: 5px;
+    background-color: #CCCCCC;
+    border: 1px solid #808080;
+}
+.DIV_MAP_FRM
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+}

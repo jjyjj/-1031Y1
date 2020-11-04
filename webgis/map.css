@@ -1,0 +1,54 @@
+﻿    /**
+    * The zoomslider in the second map shall be placed between the zoom-in and
+    * zoom-out buttons.
+    */
+    .map .ol-zoom .ol-zoom-out {
+    margin-top: 208px;
+    }
+    .map .ol-zoomslider {
+    background-color: transparent;
+    top: 2.3em;
+    }
+
+    .map .ol-touch .ol-zoom .ol-zoom-out {
+    margin-top: 212px;
+    }
+    .map .ol-touch .ol-zoomslider {
+    top: 2.75em;
+    }
+
+    .map .ol-zoom-in.ol-has-tooltip:hover [role=tooltip],
+    .map .ol-zoom-in.ol-has-tooltip:focus [role=tooltip] {
+    top: 3px;
+    }
+
+    .map .ol-zoom-out.ol-has-tooltip:hover [role=tooltip],
+    .map .ol-zoom-out.ol-has-tooltip:focus [role=tooltip] {
+    top: 232px;
+    }
+ 
+    /**
+    * 这是有关标记的样式
+    */   
+      #marker {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #088;
+        border-radius: 10px;
+        background-color: #0FF;
+        opacity: 0.5;
+      }
+      #vienna {
+        text-decoration: none;
+        color: white;
+        font-size: 11pt;
+        font-weight: bold;
+        text-shadow: black 0.1em 0.1em 0.2em;
+      }
+      .popover-content {
+        min-width: 220px;
+      }
+
+      
+      
+      
