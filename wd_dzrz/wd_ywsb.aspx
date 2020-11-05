@@ -288,11 +288,11 @@
                                                         <tr style="back">
                                                             <th class="input-group-addon  ">序号
                                                             </th>
-                                                            <th class="input-group-addon ">开始-结束时间
+                                                            <th class="input-group-addon hidden-480 ">开始-结束时间
 
                                                             </th>
 
-                                                            <th class="input-group-addon hidden-480">休假天数</th>
+                                                            <th class="input-group-addon ">休假天数</th>
                                                             <th class="input-group-addon hidden-480">变更时间</th>
                                                             <th class="input-group-addon ">状态</th>
                                                             <th class="input-group-addon">操作</th>
@@ -309,10 +309,10 @@
                                                         %>
                                                         <tr>
                                                             <td class="input-group-addon"><%=i+1%></td>
-                                                            <td class="input-group-addon">开始：<%=tb.Rows[i]["T_WSTART"].ToString()%><br />
+                                                            <td class="input-group-addon hidden-480">开始：<%=tb.Rows[i]["T_WSTART"].ToString()%><br />
                                                                 结束：<%=tb.Rows[i]["T_WEND"].ToString()%></td>
 
-                                                            <td class="hidden-480 input-group-addon">
+                                                            <td class="input-group-addon">
                                                                 <%=(Convert.ToDateTime(tb.Rows[i]["T_WEND"].ToString())-Convert.ToDateTime(tb.Rows[i]["T_WSTART"].ToString())).Days%>天
                                                             </td>
                                                             <td class="hidden-480 input-group-addon">开始：<%=tb.Rows[i]["T_NewStartTime"].ToString()%><br />
@@ -328,6 +328,9 @@
                                                                     onclick="clickTj(<%=tb.Rows[i]["T_WID"].ToString()%>)"><%=Int32.Parse(tb.Rows[i]["T_FLAG"].ToString())==0?"提交":""%></a>
                                                                 <a href="#"
                                                                     onclick="clickBg(<%=tb.Rows[i]["T_WID"].ToString()%>)"><%=Int32.Parse(tb.Rows[i]["T_FLAG"].ToString())!=0?"变更":""%></a>
+                                                                <br />
+                                                                <a href="#"
+                                                                    onclick="select(<%=tb.Rows[i]["T_WID"].ToString()%>)"><%=Int32.Parse(tb.Rows[i]["T_FLAG"].ToString())==4?"驳回原因":""%></a>
                                                             </td>
 
                                                             <%
@@ -421,8 +424,21 @@
                                                 </div>
                                             </div>
 
-                                        </div>
 
+                                        </div>
+                                        <div id="ress" class="col-xs-12 col-sm-6  " style="display: none">
+                                            <button class="btn btn-info" onclick="fh()" type="button">
+                                                返回
+                                            </button>
+                                            <br />
+                                            <br />
+                                            <div class="input-group">
+                                                <span class="input-group-addon">驳回原因</span>
+
+                                            </div>
+                                            <textarea rows="3" cols="0" class="form-control input-mask-phone" id="ReturnReason" placeholder="请输入"></textarea>
+
+                                        </div>
 
                                         <div id="faq-tab-lunxiu" class="tab-pane fade">
                                             <div class="col-xs-6 col-sm-3 pricing-box">
@@ -1021,7 +1037,29 @@
         $('.btn2').hide()
 
     }
+    function fh() {
+        $('#faq-tab-qj').show()
+        $('#ress').hide(500)
+    }
+    //查看驳回原因
+    function select(Id) {
+        $('#faq-tab-qj').hide()
 
+        $.ajax({
+            url: '../it/jjy/getXiuJiaInfo.ashx',
+            type: 'post',
+            data: {
+                T_WID: Id,
+            },
+            success: function (data) {
+                setTimeout(function () {
+                    $('#ress').show(500)
+                }, 100)
+
+                $('#ReturnReason').val(data[0].T_ReturnReason)
+            }
+        });
+    }
     //请假
     function submint(type) {
         var strstart = $("#startqj").val();

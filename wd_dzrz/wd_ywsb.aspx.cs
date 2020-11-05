@@ -58,6 +58,8 @@ namespace MarketInfo.wd_dzrz
                     val = "待审批"; break;
                 case "3":
                     val = "已审批"; break;
+                case "4":
+                    val = "驳回"; break;
                 default:
                     break;
             }

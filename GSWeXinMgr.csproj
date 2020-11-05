@@ -2659,6 +2659,7 @@
     <Content Include="wd_dzrz\szff_his.aspx" />
     <Content Include="wd_dzrz\tables.html" />
     <Content Include="wd_dzrz\userslist.aspx" />
+    <Content Include="wd_dzrz\user\huiYiJlList.aspx" />
     <Content Include="wd_dzrz\user\wd_reason.aspx" />
     <Content Include="wd_dzrz\user\wd_userbg.aspx" />
     <Content Include="wd_dzrz\wd_cz.aspx" />
@@ -3398,6 +3399,15 @@
     <Compile Include="it\it_xunhuguanli.aspx.designer.cs">
       <DependentUpon>it_xunhuguanli.aspx</DependentUpon>
     </Compile>
+    <Compile Include="it\jjy\addHuiYi.ashx.cs">
+      <DependentUpon>addHuiYi.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="it\jjy\getHuiYiInfo.ashx.cs">
+      <DependentUpon>getHuiYiInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="it\jjy\getHuiYiList.ashx.cs">
+      <DependentUpon>getHuiYiList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="it\jjy\getXiuJiaInfo.ashx.cs">
       <DependentUpon>getXiuJiaInfo.ashx</DependentUpon>
     </Compile>
@@ -3643,6 +3653,13 @@
     </Compile>
     <Compile Include="wd_dzrz\user\getdw.ashx.cs">
       <DependentUpon>getdw.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="wd_dzrz\user\huiYiJlList.aspx.cs">
+      <DependentUpon>huiYiJlList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wd_dzrz\user\huiYiJlList.aspx.designer.cs">
+      <DependentUpon>huiYiJlList.aspx</DependentUpon>
     </Compile>
     <Compile Include="wd_dzrz\user\wd_reason.aspx.cs">
       <DependentUpon>wd_reason.aspx</DependentUpon>
@@ -4813,6 +4830,9 @@
     <Content Include="it\SP_BG.ashx" />
     <Content Include="it\jjy\getXiuJiaInfo.ashx" />
     <Content Include="it\jjy\update.ashx" />
+    <Content Include="it\jjy\addHuiYi.ashx" />
+    <Content Include="it\jjy\getHuiYiList.ashx" />
+    <Content Include="it\jjy\getHuiYiInfo.ashx" />
     <None Include="jquery\css\images\icons-svg\action-black.svg" />
     <None Include="jquery\css\images\icons-svg\action-white.svg" />
     <None Include="jquery\css\images\icons-svg\alert-black.svg" />

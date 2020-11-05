@@ -96,8 +96,8 @@
                                                                             <%=tb.Rows[i]["T_CRTIME"].ToString()%>                                                                   
                                                                         </td>
                                                                         <td class="input-group-addon" style="font-size: 12px">
-                                                                            <a href="#" onclick="getInfo( <%=Int32.Parse(tb.Rows[i]["T_WID"].ToString())%>    )">查看</a>
-                                                                            <a href="#" onclick="update( <%=Int32.Parse(tb.Rows[i]["T_WID"].ToString())%>    )">变更</a>
+                                                                            <a href="#" onclick="getInfo( <%=Int32.Parse(tb.Rows[i]["T_WID"].ToString())%>   ,0 )">查看</a>
+                                                                            <a href="#" onclick="getInfo( <%=Int32.Parse(tb.Rows[i]["T_WID"].ToString())%>    ,1)">驳回</a>
                                                                         </td>
                                                                         <%}
                                                                             } %>
@@ -115,14 +115,16 @@
                                                 <div class="col-xs-12 col-sm-6 " style="">
                                                     <div class="widget-box">
                                                         <div class="widget-header">
-                                                            <h4 class="widget-title">休假信息详情</h4>
 
+                                                            <h4 class="widget-title">
+                                                                <span class="updateSpan ">休假信息详情</span>
+                                                            </h4>
                                                             <span class="widget-toolbar">
                                                                 <a href="#" data-action="collapse"><i class="ace-icon fa fa-chevron-up"></i></a>
                                                                 <a href="#" onclick="er_cancel()"><i class="ace-icon fa fa-times"></i></a></span>
                                                         </div>
                                                         <div class="widget-body">
-                                                            <div class="widget-main">
+                                                            <div id="res" class="widget-main">
 
                                                                 <div>
                                                                     <div class="input-group">
@@ -183,13 +185,24 @@
                                                         </div>
                                                         <textarea rows="3" cols="0" class="form-control input-mask-phone" id="reason" placeholder="请输入"></textarea>
                                                     </div>
+                                                                &nbsp;
+                                                  
 
+                                                            </div>
+                                                            <div id="ress" style="display: none">
+                                                                <div class="input-group">
+                                                                    <span class="input-group-addon">驳回原因</span>
 
+                                                                </div>
+                                                                <textarea rows="3" cols="0" class="form-control input-mask-phone" id="ReturnReason" placeholder="请输入"></textarea>
                                                             </div>
                                                             <div style="text-align: center">
 
-                                                                <button class="btn btn-info" type="button" onclick="update();">
+                                                                <button id="btn_sure" class="btn btn-info" type="button" onclick="update(0);">
                                                                     <i class="ace-icon fa fa-check bigger-110"></i>确认审批
+                                                                </button>
+                                                                <button id="btn_return" style="display: none" class="btn btn-info" type="button" onclick="update(1);">
+                                                                    <i class="ace-icon fa fa-check bigger-110"></i>驳回
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -294,7 +307,20 @@
         }
         var id = -1;
         //查看详情
-        function getInfo(val) {
+        function getInfo(val, type) {
+            //0 查看 1 驳回
+            if (type == 0) {
+                $('#ress').hide();
+                $('#res').show();
+                $('#btn_return').hide();
+                $('#btn_sure').show()
+            }
+            else {
+                $('#res').hide();
+                $('#ress').show();
+                $('#btn_return').show()
+                $('#btn_sure').hide();
+            }
             id = val
             $('#info').show(500);
             $('#list').hide(500);
@@ -303,7 +329,7 @@
                 type: 'post',
                 data: { T_WID: val },
                 success: function (data) {
-                    console.log(data)
+
                     $('#name').text(data[0].T_NAME)
                     $('#startTime').text(data[0].T_WSTART)
                     $('#endTime').text(data[0].T_WEND)
@@ -321,25 +347,30 @@
             });
         }
         //同意变更
-        function update(val) {
-            if (id == -1) {
-                id = val
+        function update(type) {
+            var dd;
+            if (type == 1) {
+
+                dd = {
+                    T_WID: id,
+                    type: type,
+                    ReturnReason: $('#ReturnReason').val()
+                };
+            }
+            else {
+                dd = {
+                    T_WID: id,
+                    type: type
+                };
             }
             mui.confirm('是否确认变更审批？', '', function (e) {
                 if (e.index == 1) {
                     $.ajax({
                         url: '../it/jjy/update.ashx',
                         type: 'post',
-                        data: { T_WID: id },
+                        data: dd,
                         success: function (data) {
-                            if (data == 0) {
-                                //成功
-                                mui.toast('审批成功');
-                            }
-                            else {
-                                //error
-                                mui.toast('审批失败');
-                            }
+                            mui.toast(data);
                             setInterval(function () {
                                 location.reload();
                             }, 500)
